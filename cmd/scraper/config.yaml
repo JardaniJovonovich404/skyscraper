@@ -1,0 +1,21 @@
+scraper:
+  base_url: "https://www.instagram.com"
+  timeout: 30s
+  retries: 3
+  user_agents: []
+  proxy_list: []
+  browser_pool_size: 10
+  max_uses_per_browser: 10
+  max_tabs_per_browser: 2
+  concurrency: 5
+  output_file: "comments.jsonl"
+  cookies_file: "cookies.json"
+
+database:
+  driver: "sqlite3"
+  dbname: "instagram_comments.db"   
+
+logging:
+  level: "debug"
+  info_path: "logs/scraper.log"
+  error_path: "logs/errors.log"
